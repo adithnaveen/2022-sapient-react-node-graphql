@@ -328,7 +328,7 @@ while(cursor1.hasNext()) {
 
 
 
-# day 3 
+# Day 3 
 
 - to drop collection 
 > db.capCol.drop();
@@ -519,7 +519,8 @@ ProfessionalDetails
 
 
 
-
+-- set profile level 2 (all) 
+> db.setProfilingLevel(2);
 
 
 
@@ -758,3 +759,35 @@ for(var i=0; i<100000; i++) {
 
 ```
 
+
+
+# Day 4 
+
+protocol 
+    - HTTP 
+        - 1.0 - statefull protocol 
+        - 1.1 - stateless prototcol
+        - 2.0 - pull requests 
+
+- WebServer 
+    - http 
+        - tomcat 
+        - jetty 
+                - nodejs 
+                    - build on top of JS 
+                    - programming language called c / C++ 
+                    - amalgamation between JS + C/c++ 
+                    - you can invoke c code from JS - Native library 
+                    - V8 enginee 
+        - netty 
+        - apache 
+            - Browser / Mobile... 
+- Application 
+    - http 
+    - raw 
+    - ftp / smtp ... 
+        - jboss 
+        - glass fish
+        - web logic 
+        - web sphere 
+        - IIS 
