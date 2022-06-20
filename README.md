@@ -791,3 +791,16 @@ protocol
         - web logic 
         - web sphere 
         - IIS 
+
+
+- Try out 
+    - create or have a file with over 2gb, try to copy the content from source file to destination file 
+        - readFile 
+        - readStream
+
+-rw-r--r--  1 naveenkumar  admin  316188 20 Jun 14:46 somefile.txt
+-rw-r--r--  1 naveenkumar  admin  316198 20 Jun 14:52 somefile3.txt.gz
+
+
+-rw-r--r--  1 naveenkumar  admin  4742820 20 Jun 14:53 somefile.txt
+-rw-r--r--  1 naveenkumar  admin  4757781 20 Jun 14:53 somefile3.txt.gz
