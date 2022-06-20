@@ -11,6 +11,7 @@ http.createServer((request, response) => {
     console.log("Request for " + pathname + " received.");
 
     if (request.method === 'POST' && pathname === '/validate') {
+        // http://localhost:3000?uname=shailesh&pass=testing
         let body = '';
         request.on('data', chunk => {
             body += chunk.toString();
@@ -26,20 +27,10 @@ http.createServer((request, response) => {
         response.writeHead(200, { 'content-type': 'text/html' });
         readStream.pipe(response);
 
-    } else if (request.method === 'POST' && pathname === '/') {
+    } else if (request.method === 'GET' && pathname === '/') {
+        const readStream = fs.createReadStream('./home.html');
+        response.writeHead(200, { 'content-type': 'text/html' });
+        readStream.pipe(response);
 
-        // Read the requested file content from file system
-        fs.readFile(pathname.substr(1), function (err, data) {
-            if (err) {
-                console.log(err);
-                response.writeHead(404, { 'Content-Type': 'text/html' });
-                response.write("File Not Found");
-
-            } else {
-                response.writeHead(200, { 'Content-Type': 'text/html' });
-                response.write(data.toString());
-            }
-            response.end();
-        });
     }
 }).listen(3000);
