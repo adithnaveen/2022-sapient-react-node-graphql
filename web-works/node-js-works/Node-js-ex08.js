@@ -3,10 +3,9 @@
 const fs = require("fs"); 
 const zlib = require("zlib"); 
 const gzip = zlib.createGzip();
-
-
-const readStream = fs.createReadStream('./somefile.txt', 'utf8');
-const writeStream = fs.createWriteStream('./somefile3.txt.gz', 'utf8');
+ 
+const readStream = fs.createReadStream('./ds.pdf');
+const writeStream = fs.createWriteStream('./somefile3.gz');
 
 // short hand notion of previous program
 // readStream.pipe(writeStream);
