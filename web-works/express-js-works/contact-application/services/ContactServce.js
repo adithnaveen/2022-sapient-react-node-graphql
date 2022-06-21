@@ -60,8 +60,49 @@ class ContactService {
     // 3. delete a record which matches 
     // 4. post a new contact 
 
+    updateContact(contact) {
+        if (!contact || typeof contact !== 'object') {
+            throw new Error("Contact is not a object");
+        }
+
+        if (!contact.id || typeof contact.id !== 'number') {
+            throw new Error("Please pass contact ID");
+        }
+
+        const requireFields = ['name', 'email', 'phone', 'city'];
+        const missingFields = [];
+
+        requireFields.forEach((field) => {
+            if (!(field in contact)) {
+                missingFields.push(field);
+            }
+        });
+
+        if (missingFields.length !== 0) {
+            throw new Error("Required Missing fields " + missingFields.join());
+        }
+
+        this.deleteContact(contact.id);
+
+        this.data.contacts.push(contact);
+        return { ...contact };
+    }
+
+
+
     // deleteContact
-    // take the id, splice and send the message 
+
+    deleteContact(id) {
+        if (typeof id != 'number') {
+            throw new Error('a number must be supplied as id');
+        }
+        let index = this.data.contacts.findIndex(c => c.id === id);
+        if (index === -1) {
+            throw new Error('Invalid id for deletion');
+        }
+        this.data.contacts.splice(index, 1);
+    }
+
 }
 
 module.exports = ContactService;

@@ -22,3 +22,21 @@ cs.getAllContact().forEach((contact) => {
 })
 
 
+uContact = { id: 1, name: "Kumkum Ram", email: "kumkum@ps.com", phone: 7788996655, city: "New York" };
+cs.updateContact(uContact);
+
+
+
+
+console.log("All Contacts after update... ");
+cs.getAllContact().forEach((contact) => {
+    console.log(contact);
+})
+console.log("----------------------------");
+cs.deleteContact(1);
+
+
+console.log("All Contacts after delete... 1 ");
+cs.getAllContact().forEach((contact) => {
+    console.log(contact);
+})
