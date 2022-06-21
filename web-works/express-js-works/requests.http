@@ -1,0 +1,13 @@
+GET http://localhost:8000 HTTP/1.1
+
+
+####
+GET http://localhost:8000/example HTTP/1.1
+
+####
+GET http://localhost:8000/example/101/Naveen HTTP/1.1
+
+####
+GET http://localhost:8000/hello HTTP/1.1
+####
+GET http://localhost:8000/heppo HTTP/1.1

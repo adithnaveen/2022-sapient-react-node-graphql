@@ -28,7 +28,9 @@ http.createServer((request, response) => {
         readStream.pipe(response);
 
     } else if (request.method === 'GET' && pathname === '/') {
+
         const readStream = fs.createReadStream('./home.html');
+        debugger;
         response.writeHead(200, { 'content-type': 'text/html' });
         readStream.pipe(response);
 

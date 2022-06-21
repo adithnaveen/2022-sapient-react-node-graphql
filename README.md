@@ -806,3 +806,31 @@ protocol
 -rw-r--r--  1 naveenkumar  admin  4757781 20 Jun 14:53 somefile3.txt.gz
 
 <a href="loginform.html">Login Form</a>
+
+- os constants 
+
+console.log(os.tmpdir());
+console.log(os.type());
+console.log(os.platform());
+console.log(os.hostname());
+console.log(os.homedir());
+console.log(os.uptime());
+console.log(os.cpus());
+console.log(os.freemem());
+console.log(os.totalmem());
+console.log(__dirname);
+
+
+# Day 5
+
+
+- The usage of cache memory at different levels 
+
+- express js -> regexp, routes will work , middleware etc... 
+- npm installin packages / updating / removing packages 
+- nodemon 
+- use a data base to store the data (inmemory / json file / mongodb)
+- Restful services 
+- node application invoking cpp 
+
+
