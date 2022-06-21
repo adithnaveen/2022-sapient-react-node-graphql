@@ -1,0 +1,19 @@
+{
+    "idCounter": 2,
+    "contacts": [
+        {
+            "id": 1,
+            "name": "Rohit Manora",
+            "email": "rohit@ps.com",
+            "phone": 77441100,
+            "city": "Delhi"
+        },
+        {
+            "id": 2,
+            "name": "Ankit",
+            "email": "ankit@ps.com",
+            "phone": 4563214569,
+            "city": "Mumbai"
+        }
+    ]
+}
