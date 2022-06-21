@@ -8,6 +8,24 @@ GET http://localhost:8000/example HTTP/1.1
 GET http://localhost:8000/example/101/Naveen HTTP/1.1
 
 ####
+GET http://localhost:8000/example/101/Naveen?order=ascending&noodrecords=10 HTTP/1.1
+
+####
 GET http://localhost:8000/hello HTTP/1.1
 ####
 GET http://localhost:8000/heppo HTTP/1.1
+
+
+
+
+####
+POST http://localhost:8000/example HTTP/1.1
+Content-Type: application/json
+
+{
+    "empid" :101, 
+    "empname" :"Harry"
+}
+
+####
+GET http://localhost:8000/example-route HTTP/1.1
