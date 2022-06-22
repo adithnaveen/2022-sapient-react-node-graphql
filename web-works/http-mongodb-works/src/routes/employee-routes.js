@@ -10,8 +10,6 @@ import {
 }
     from "../controllers/employee-controller";
 
-import hash from '../util/hash';
-
 const routes = (app) => {
     app.route("/")
         .get(home);
