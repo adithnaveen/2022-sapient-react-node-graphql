@@ -15,6 +15,12 @@
 ## mongodb normalize 
 > https://www.mongodb.com/docs/manual/reference/database-references/
 
+## Express JS - basics 
+- https://expressjs.com/en/starter/installing.html 
+
+## Express js - middle ware 
+- https://expressjs.com/en/guide/using-middleware.html
+
 
 
 
