@@ -848,3 +848,25 @@ console.log(__dirname);
 - EJS 
 - logging - Winston 
 - Image updload with multer 
+
+- Richarson Maturity Model
+    - 0 - XML ( Swamp of POX)
+    - 1 - use JSON but single URI 
+        - http://localhost:3000/getemployee 
+        - http://localhost:3000/saveemployee
+        - http://localhost:3000/updateemployee 
+    - 2 - use HTTP verbs 
+        - GET - http://localhost:3000/employee 
+        - GET - http://localhost:3000/employee/{employeeId}
+        - POST - http://localhost:3000/employee 
+        - DELETE - http://localhost:3000/employee 
+        - OPTION - http://localhost:3000/employee 
+        - PUT - http://localhost:3000/employee 
+    - 3 - with HATEOAS - restful 
+        - GET - http://localhost:3000/employee  - 200  - get all 
+        - GET - http://localhost:3000/employee/{employeeId} - 200 
+        - POST - http://localhost:3000/employee  - 201 
+        - DELETE - http://localhost:3000/employee - 200 
+        - OPTION - http://localhost:3000/employee - 200 
+        - PUT - http://localhost:3000/employee - 200 
+        + - when the resouce is asked then the related resources to be given back. 
