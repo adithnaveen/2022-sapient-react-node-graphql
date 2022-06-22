@@ -841,3 +841,10 @@ console.log(__dirname);
     }, 0)
     console.log('3'); 
 ```
+
+
+# Day 6 
+- connecting with Express JS + Integrate with MongoDB
+- EJS 
+- logging - Winston 
+- Image updload with multer 
