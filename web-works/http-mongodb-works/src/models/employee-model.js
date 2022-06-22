@@ -3,7 +3,7 @@ import mongoose from 'mongoose';
 const Schema = mongoose.Schema;
 
 
-export const EpmloyeeSchema = new Schema({
+export const EmployeeSchema = new Schema({
 
     firstName: {
         type: String,

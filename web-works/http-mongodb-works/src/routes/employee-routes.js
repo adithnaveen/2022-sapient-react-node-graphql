@@ -5,6 +5,7 @@ const routes = (app) => {
         .get(home);
 
 
+    app.route()
 }
 
 export default routes;
