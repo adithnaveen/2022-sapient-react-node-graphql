@@ -1,29 +1,10 @@
 
 import mongoose from 'mongoose';
 import { EmployeeSchema } from '../models/employee-model';
-import bcrypt from 'bcrypt';
+
+import { hash, compare } from '../util/hash'
 
 const Employee = mongoose.model('Employee', EmployeeSchema);
-const SALT_ROUNDS = 10;
-
-
-// utility works 
-
-// bcrypt works 
-async function hash(password) {
-    const salt = await bcrypt.genSalt(SALT_ROUNDS);
-    const hashedPassword = await bcrypt.hash(password, salt);
-    return hashedPassword;
-}
-
-
-// compare password with hashed password 
-
-async function compare(password, hashedPassword) {
-    const match = await bcrypt.compare(password, hashedPassword);
-    return match;
-}
-
 
 
 // add employee - version 1
