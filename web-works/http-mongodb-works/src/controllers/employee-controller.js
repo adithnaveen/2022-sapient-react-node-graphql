@@ -1,4 +1,4 @@
 
 export const home = (req, res) => {
-    res.json({ "message": "Welcome" });
+    res.json({ "message": "Welcome from Express" });
 }
