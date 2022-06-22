@@ -10,6 +10,25 @@ import {
 }
     from "../controllers/employee-controller";
 
+
+import winston from 'winston';
+
+
+const logConfiguration = winston.createLogger({
+    level: 'info',
+    format: winston.format.json(),
+    transports: [
+        new winston.transports.File({ filename: 'error.log', level: 'error' }),
+        new winston.transports.File({ filename: 'combined.log' }),
+        new winston.transports.Console(),
+    ],
+});
+
+
+const logger = winston.createLogger(logConfiguration);
+
+
+
 const routes = (app) => {
     app.route("/")
         .get(home);
@@ -20,9 +39,10 @@ const routes = (app) => {
         .post((req, res, next) => {
             // this is middleware 
             // you can do logging / security related code here 
-            console.log("you invoked POST Mehtod");
-            console.log("Request From : ", req.originalUrl);
-            console.log("Method req go : ", req.method);
+            logger.info("You invoked POST Method");
+
+            logger.info("Request From : ", req.originalUrl);
+            logger.info("Method req go : ", req.method);
             next();
         }, addEmployee);
 
