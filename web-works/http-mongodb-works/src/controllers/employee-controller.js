@@ -59,7 +59,7 @@ export const updateEmployee = (req, res) => {
 
 // delete 
 export const deleteEmployeeById = (req, res) => {
-    Employee.remove({ _id: req.params.employeeId }, (err, data) => {
+    Employee.findByIdAndDelete({ _id: req.params.employeeId }, (err, data) => {
         if (err) {
             res.send(err);
         }

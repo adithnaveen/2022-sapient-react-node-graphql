@@ -8,7 +8,7 @@ const app = express();
 const PORT = 3000;
 
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost/sap_db', { useNewUrlParser: true });
+mongoose.connect('mongodb://localhost:27017/sap_db', { useNewUrlParser: true });
 
 
 // configuration
