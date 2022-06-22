@@ -67,8 +67,6 @@ export const deleteEmployeeById = (req, res) => {
     })
 }
 
-
-
 export const home = (req, res) => {
     res.json({ "message": "Welcome from Express" });
 }

@@ -1,4 +1,11 @@
-import { deleteEmployeeById, getEmployeeById, getEmployeesByFirstName, home, updateEmployee } from "../controllers/employee-controller";
+import {
+    deleteEmployeeById,
+    getEmployeeById,
+    getEmployeesByFirstName,
+    home,
+    updateEmployee
+}
+    from "../controllers/employee-controller";
 
 const routes = (app) => {
     app.route("/")
