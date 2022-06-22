@@ -1,11 +1,33 @@
 
 import mongoose from 'mongoose';
 import { EmployeeSchema } from '../models/employee-model';
+import bcrypt from 'bcrypt';
 
 const Employee = mongoose.model('Employee', EmployeeSchema);
+const SALT_ROUNDS = 10;
 
-// add employee 
-export const addEmployee = (req, res) => {
+
+// utility works 
+
+// bcrypt works 
+async function hash(password) {
+    const salt = await bcrypt.genSalt(SALT_ROUNDS);
+    const hashedPassword = await bcrypt.hash(password, salt);
+    return hashedPassword;
+}
+
+
+// compare password with hashed password 
+
+async function compare(password, hashedPassword) {
+    const match = await bcrypt.compare(password, hashedPassword);
+    return match;
+}
+
+
+
+// add employee - version 1
+export const addEmployee_v1 = (req, res) => {
     let newEmployee = new Employee(req.body);
 
     newEmployee.save((err, employee) => {
@@ -15,6 +37,24 @@ export const addEmployee = (req, res) => {
         res.json(employee);
     })
 }
+
+// add employee - version 2 with encryption
+
+export const addEmployee = async (req, res) => {
+    let emp = req.body;
+    emp.password = await hash(emp.password);
+    let newEmployee = new Employee(emp);
+
+    try {
+        let retEmp = await newEmployee.save();
+        res.send(retEmp);
+    } catch (err) {
+        res.send(err);
+    }
+}
+
+
+
 
 // get all employees 
 export const getAllEmployees = (req, res) => {
@@ -65,6 +105,22 @@ export const deleteEmployeeById = (req, res) => {
         }
         res.json({ message: "remployee deleted successfully.", data });
     })
+}
+
+
+
+// authenticat user - (email, password)
+export const authenticateUser = async (req, rest) => {
+    try {
+        let retEmployee = await Employee.findOne({ email: req.body.email });
+        const validateEmployee = await compare(req.body.password, retEmployee.password);
+
+        if (validateEmployee) {
+            res.send({ message: "User Validated" });
+        }
+    } catch (err) {
+        res.send({ message: "Sorry not validate credentials :" + req.body.email });
+    }
 }
 
 export const home = (req, res) => {

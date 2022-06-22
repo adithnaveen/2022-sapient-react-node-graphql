@@ -5,7 +5,8 @@ import {
     getAllEmployees,
     getEmployeesByFirstName,
     home,
-    updateEmployee
+    updateEmployee,
+    authenticateUser
 }
     from "../controllers/employee-controller";
 
@@ -16,7 +17,15 @@ const routes = (app) => {
 
     app.route("/employee")
         .get(getAllEmployees)
-        .post(addEmployee);
+        .post((req, res, next) => {
+            // this is middleware 
+            // you can do logging / security related code here 
+            console.log("you invoked POST Mehtod");
+            console.log("Request From : ", req.originalUrl);
+            console.log("Method req go : ", req.method);
+            next();
+        }, addEmployee);
+
 
     app.route("/employee/:employeeId")
         .get(getEmployeeById)
@@ -25,6 +34,9 @@ const routes = (app) => {
 
     app.route("/employee/name/:firstName")
         .get(getEmployeesByFirstName);
+
+    app.route("/auth")
+        .post(authenticateUser);
 }
 
 export default routes;
