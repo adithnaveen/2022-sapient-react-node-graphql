@@ -1,6 +1,8 @@
 import {
     deleteEmployeeById,
     getEmployeeById,
+    addEmployee,
+    getAllEmployees,
     getEmployeesByFirstName,
     home,
     updateEmployee

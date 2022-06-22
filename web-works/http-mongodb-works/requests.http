@@ -3,4 +3,24 @@ GET http://localhost:3000/ HTTP/1.1
 
 #### 
 
+POST http://localhost:3000/employee HTTP/1.1
+Content-Type: application/json
 
+{
+    "firstName" :"Irshad", 
+    "lastName" :"Mulani", 
+    "password" :"keepguessing123", 
+    "email" :"irsmul@gmail.com", 
+    "phone" :12347777891
+}
+
+### 
+GET http://localhost:3000/employee HTTP/1.1
+
+
+### 
+GET http://localhost:3000/employee/62b2c7068211dffb0bae5db6 HTTP/1.1
+
+### 
+
+DELETE http://localhost:3000/employee/62b2c7068211dffb0bae5db6 HTTP/1.1
