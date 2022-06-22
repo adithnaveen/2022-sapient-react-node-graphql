@@ -88,6 +88,26 @@ class ContactService {
 
     }
 
+    // get all contacts 
+    getAllContacts(callback) {
+        if (!callback || typeof callback !== 'function') {
+            throw new Error("Callback function missing");
+        }
+
+        setTimeout(() => {
+            if (this.data.contacts.length === 0) {
+                let err = {};
+                err.code = 1004;
+                err.msg = "No Contacts found";
+                callback(err);
+                return;
+            }
+            callback(null, [...this.data.contacts]);
+        }, 0);
+    }
+    // updated contact 
+
+    // delete contact 
 
 
 

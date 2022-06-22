@@ -633,7 +633,7 @@ size of index
 
 Team 1 - Ankit, Dhananjay, Prit, Rajitha, Sandeep
     - OTT 
-Team 2 - Himanshu, Manav, Ramkumar, Sourabh
+Team 2 - Himanshu, Manav, Ramkumar, Sourabh, Rohit Wadhwani 
     - Ecommerce platform 
 Team 3 - Ayush, Harsh, Hemanth, Irshad, Sailesh 
     - Travel application 
