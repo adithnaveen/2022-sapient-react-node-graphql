@@ -870,3 +870,182 @@ console.log(__dirname);
         - OPTION - http://localhost:3000/employee - 200 
         - PUT - http://localhost:3000/employee - 200 
         + - when the resouce is asked then the related resources to be given back. 
+
+
+
+
+# Day 7
+- Auth - how to use user model with auth 
+- JWT program to auth the user 
+- https://jwt.io/#debugger-io?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.f9gSOnolW0uUbQsD3G7XCEHxxSqn29Ao3b1V_k5jscA
+- GraphQL 
+    GET /api/video 5ms 
+    POST /api/video 5ms 
+    GET /api/video/{videoId} - 3msn
+    DELETE /api/video/{videoId} - 3msn
+    POST /api/video/video/comments  - 10 ms
+    GET /api/video/video/comments  - 10 ms
+    PUT /api/video/video/comments  - 10 ms
+
+    /api/video/related/videos - 2 secs
+
+    - Query - will make only POST calls 
+    ```
+        query {
+            visa_availble_countries{
+                country 
+                type 
+                validity
+            }
+        }
+    ```
+    - Mutation 
+    ```
+        mutation {
+            setVisaAvailableCounties (
+                country:"india", 
+                validity:"06/2030", 
+                type:"Tourist"
+            ){
+                country
+                validity
+            }
+        }
+    ```
+    - Observer 
+
+    - SQL - select * from emp; - rest 
+    - SQL - select * from emp where city='blr'; - graphql
+
+
+```
+allLifts(
+    status: LiftStatus - OPENED, CLOSE, INFLIGHT
+): [Lift!]!
+
+allLifts(
+    status: LiftStatus - OPENED, CLOSE, INFLIGHT
+): [Lift!] 
+
+allLifts(
+    status: LiftStatus - OPENED, CLOSE, INFLIGHT
+): [Lift]!
+
+allLifts(
+    status: LiftStatus - OPENED, CLOSE, INFLIGHT
+): [Lift]
+
+```
+- Microsevice - API Gateway 
+
+
+
+- https://snowtooth.moonhighway.com/ 
+- Query 
+```
+    # Write your query or mutation here
+        query{
+        liftCount
+        allLifts {
+            name
+            capacity
+        }
+        }
+```
+- passing arguments - enum 
+
+```
+    query{
+        openLifts: liftCount(status:OPEN)
+    closeLifts: liftCount(status:CLOSED)
+    allLifts {
+        liftName: name
+        capacity
+    }
+    }
+```
+
+-- Pass query 
+
+```
+
+    query ($status: LiftStatus){
+        returnLifts: liftCount(status:$status)
+        allLifts {
+            liftName: name
+            capacity
+        }
+    }
+
+    Under Query Variable 
+
+    {
+        "status": "HOLD"
+    }
+```
+
+-  to get connected types
+```
+
+ query {
+  allLifts {
+    liftName: name, 
+    capacity, 
+    status
+    trailAccess {
+      name
+      status
+      accessedByLifts {
+        name
+      }
+    }
+  }
+}
+
+```
+
+- get data from different models - not connected 
+```
+    query AllLifts {
+    allLifts {
+        liftName: name, 
+        capacity, 
+        status
+        }
+    }
+
+    query AllTrails {
+    allTrails {
+        name
+        status
+    }
+    }
+
+```
+
+- mutation - change status of trail 
+
+```
+    query AllTrails {
+    allTrails {
+        id
+        name
+        status
+    }
+    }
+
+    query Trail {
+    Trail(id:"dance-fight") {
+        name
+        status
+    }
+    }
+
+- mutation 
+    mutation {
+    setTrailStatus( id: "dance-fight", status:OPEN) {
+        name
+        status
+    }
+    }
+```
