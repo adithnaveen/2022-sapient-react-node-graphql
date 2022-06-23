@@ -3,7 +3,9 @@ const jwt = require("jsonwebtoken");
 
 
 let app = express();
+require('dotenv').config()
 
+const privateKey = process.env.PRIVATE_KEY;
 
 app.get("/api", (req, res) => {
     res.json({
@@ -12,7 +14,7 @@ app.get("/api", (req, res) => {
 })
 
 app.get("/api/protected", ensureToken, (req, res) => {
-    jwt.verify(req.token, 'MySecretKey', (err, data) => {
+    jwt.verify(req.token, privateKey, (err, data) => {
         if (err) {
             res.sendStatus(403);
         } else {
@@ -31,7 +33,8 @@ app.post("/api/login", (req, res) => {
         userName: 'Sapient',
         password: 'india'
     };
-    const token = jwt.sign({ user }, 'MySecretKey');
+
+    const token = jwt.sign({ user }, privateKey);
     res.json({
         token: token
     });

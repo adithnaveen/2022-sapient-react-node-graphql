@@ -4,7 +4,7 @@ GET http://localhost:3000/api  HTTP/1.1
 ### 
 
 GET http://localhost:3000/api/protected HTTP/1.1
-Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJOYW1lIjoiU2FwaWVudCIsInBhc3N3b3JkIjoiaW5kaWEifSwiaWF0IjoxNjU1OTc3NjE3fQ.AjUCTpUKEWbJlsv_FXS81vJeGaqxvrDovbHrRFK0q_I
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJOYW1lIjoiU2FwaWVudCIsInBhc3N3b3JkIjoiaW5kaWEifSwiaWF0IjoxNjU1OTgwMDY0fQ._PXYCQKZ0LIwL1eIiMTnBEnysjhwG7z0MO12ccyDG0I
 
 
 
