@@ -1057,3 +1057,21 @@ type Mutation {
 }
 
 ```
+
+
+
+Team 1 - Ankit, Dhananjay, Prit, Rajitha, Sandeep - 
+    - OTT 
+Team 2 - Himanshu, Manav, Ramkumar, Sourabh, Rohit Wadhwani 
+    - Ecommerce platform 
+Team 3 - Ayush, Harsh, Hemanth, Irshad, Sailesh 
+    - Travel application 
+Team 4 - Aman, Brahmanand, Kumkumbala, Madhulatha, Varki 
+    - e-courses (online courses)
+Team 5 - Ravivarma, Rohit, Santosh, Vikas verma , hitesh
+    - Library Management System 
+
+- 1 person from the team to represent 
+- who will take which module 
+- create the services necessary 
+- Perform CRUD operations 
