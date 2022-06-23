@@ -26,6 +26,7 @@ app.get("/api/protected", ensureToken, (req, res) => {
 
 // user login 
 app.post("/api/login", (req, res) => {
+    // validation of user shall go here, try with yesterday's example 
     const user = {
         userName: 'Sapient',
         password: 'india'
