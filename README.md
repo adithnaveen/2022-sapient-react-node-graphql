@@ -1026,7 +1026,7 @@ allLifts(
 - mutation - change status of trail 
 
 ```
-    query AllTrails {
+query AllTrails {
     allTrails {
         id
         name
@@ -1048,4 +1048,12 @@ allLifts(
         status
     }
     }
+```
+- resolvers look like 
+```
+type Mutation {
+    addProgrammer(date:String, dateOfProgrammer:String, domain:Domain)
+
+}
+
 ```
