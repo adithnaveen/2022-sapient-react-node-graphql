@@ -1060,18 +1060,83 @@ type Mutation {
 
 
 
+
+# Day 8 
+
 Team 1 - Ankit, Dhananjay, Prit, Rajitha, Sandeep - 
     - OTT 
+    - Ankit - customer db 
+    - dhananjay - categories 
+    - prit - content 
+    - rajitha - working on MS - reivew 
+    - sandeep - plans  
+    - team1-customer
+    - team1-content
+
 Team 2 - Himanshu, Manav, Ramkumar, Sourabh, Rohit Wadhwani 
     - Ecommerce platform 
+    - divided the modules, admin product section + manage -sourabh 
+    - user login + reg - himanshu 
+    - product listing - rohit 
+    - cart ops - ram kumar 
+    - order creation  -manav 
+    - creating the model file as of now 
+    - need to work on MS 
+    - team2-cart
+
 Team 3 - Ayush, Harsh, Hemanth, Irshad, Sailesh 
     - Travel application 
+    - works are sliced 
+    - 5 ms - auth service sailesh 
+    - Irshad - booking 
+    - trips - harsh 
+    - hemanth - reviews 
+    - ayush - trip packages 
+
 Team 4 - Aman, Brahmanand, Kumkumbala, Madhulatha, Varki 
     - e-courses (online courses)
+    - decided the task 
+    - 4 ms - auth service - madhulatha 
+    - courses - aman 
+    - payment - kumkum bala  
+    - profile user profile - Brahmanand/varki 
+
 Team 5 - Ravivarma, Rohit, Santosh, Vikas verma , hitesh
     - Library Management System 
+    - 3 members 
+    - auth service 
+    - rohit - reservce / borrow  for book + maintain the no of books 
+    - hitesh - search of book 
+    - vikas - return book 
+    - have to normalize the data model to know how book is borrowed + date user etc.. 
 
 - 1 person from the team to represent 
 - who will take which module 
 - create the services necessary 
 - Perform CRUD operations 
+
+
+- TDD - Test Driven Developement 
+- BDD - Behavioural Driven Development 
+- DDD - Domain Driven Development 
+- MDD - Model Driven Development 
+
+- mocha - chai 
+- jasmine 
+- jest 
+- testing library 
+
+
+```
+    a = 10; 
+    b = 20; 
+
+    a = 20; 
+    b= 10; 
+
+    if(a > b ) {
+        return a; 
+    }else {
+        return b; 
+    }
+```
