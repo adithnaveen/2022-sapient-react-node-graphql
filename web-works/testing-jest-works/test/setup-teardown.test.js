@@ -3,19 +3,19 @@ const { largeNumber, largeNumberBoolean } = require("../src/business-logic")
 let num1 = 0;
 let num2 = 0;
 beforeAll(() => {
-    console.log("This is in before all");
+    // console.log("This is in before all");
 })
 afterAll(() => {
-    console.log("This is in after all");
+    // console.log("This is in after all");
 })
 
 beforeEach(() => {
     num1 = 20;
     num2 = 10;
-    console.log("in beforeEach()")
+    // console.log("in beforeEach()")
 })
 afterEach(() => {
-    console.log("this is after Each ")
+    // console.log("this is after Each ")
 })
 
 
@@ -34,10 +34,10 @@ describe('to find largest of numbers for different values', () => {
 
         beforeEach(() => {
 
-            console.log("in beforeEach()- Nested")
+            // console.log("in beforeEach()- Nested")
         })
         afterEach(() => {
-            console.log("this is after Each - Nested")
+            // console.log("this is after Each - Nested")
         })
 
 
