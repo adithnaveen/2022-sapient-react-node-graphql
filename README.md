@@ -1089,6 +1089,27 @@ Team 3 - Ayush, Harsh, Hemanth, Irshad, Sailesh
     - works are sliced 
     - 5 ms - auth service sailesh 
     - Irshad - booking 
+    ```{
+            user:ID, 
+            bookings: [
+                {
+                    booking : ID, 
+                    source: String, 
+                    destination:String, 
+                    booking-date:Date, 
+                    travel: {
+                        start:Date, 
+                        end:Date
+                    }
+                    amount:Number, 
+                    people : [String] - optional 
+                    
+                }
+
+            ]
+
+        }
+    ```
     - trips - harsh 
     - hemanth - reviews 
     - ayush - trip packages 
@@ -1177,5 +1198,31 @@ Team 5 - Ravivarma, Rohit, Santosh, Vikas verma , hitesh
 3. make sure you have .gitignore 
 4. pls send me for review + 1 person from other team 
 
+
+```
+    reels: {
+        _id:String, 
+        name:String, 
+        length:Number, 
+        category:{
+            genre: [enum], 
+            age : number, 
+            audio-language: [enum], 
+        }
+    }
+```
+
+-- search based on category 
+- http://localhost:3000/category/age{:age}
+- http://localhost:3000/category/
+- http://localhost:3000/category/language/{:language}
+- http://localhost:3000/category/ - PUT
+    {
+        category:{
+            genre: [enum], 
+            age : number, 
+            audio-language: [enum], 
+        }
+    }
 
 
