@@ -1140,3 +1140,30 @@ Team 5 - Ravivarma, Rohit, Santosh, Vikas verma , hitesh
         return b; 
     }
 ```
+
+- common things to be handled - before / after, before all after all, 
+
+```
+
+    beforeEach(() => {// will be executed before each method for n number of times})
+    afterEach(() => {// will be executed after each method for n number of times})
+
+    beforeAll(()=>{// before all the methods only once})
+    afterAll(()=>{// after all the methods only once})
+
+    test("message", () => {
+        add(n1, n2)
+    })
+
+    test("message", () => {
+        sub(n1, n2)
+    })
+
+    test("message", () => {
+        mul(n1, n2)
+    })
+
+    
+```
+- test with end point 
+- mock test 
