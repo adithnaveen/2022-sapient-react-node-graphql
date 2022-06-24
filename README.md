@@ -1167,3 +1167,15 @@ Team 5 - Ravivarma, Rohit, Santosh, Vikas verma , hitesh
 ```
 - test with end point 
 - mock test 
+
+
+- work 
+1. Create a the project 
+    1.1 get all the dependencies including testing , jwt, bcrypt etc etc... 
+    1.2 create a data model in the DB by invoking the endpoint (http)
+2. push it to github 
+3. make sure you have .gitignore 
+4. pls send me for review + 1 person from other team 
+
+
+
