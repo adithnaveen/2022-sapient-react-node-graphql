@@ -1256,6 +1256,16 @@ Team 5 - Ravivarma, Rohit, Santosh, Vikas verma , hitesh
     - CRUD operations are done 
     
 
+- need 
+    1. The application should have micro service behaviour + api gateway 
+    2. Password should not be kept directly in to the db + sensitive data too like CVV 
+    3. Auth should be with JWT 
+    4. Swagger Documentation 
+    5. Business logic to be completed 
+    6. all the requests to be in the file called request.http 
+
+
+
 
 ```
 - fetch is part of java script 
