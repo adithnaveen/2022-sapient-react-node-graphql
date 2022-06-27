@@ -1226,3 +1226,32 @@ Team 5 - Ravivarma, Rohit, Santosh, Vikas verma , hitesh
     }
 
 
+
+
+
+# Day 9 
+
+- Team 1 
+    - CRUD operations are done 
+    - project creation is done 
+    - in repo - content has basic operation up 
+    - reviews and customers repo is empty 
+    - dhananjay - prit -  categories opertions + content will be in 1 MS
+- Team 2 
+    - user login and user list 
+    - product-service is empty 
+
+- Team 3 
+    - auth is almost completed, and writing test cases 
+    - booking repo is empty 
+
+- Team 4 
+    - CRUD Operation are done 
+    - repos are created 
+    - all MS has the busiess logic 
+
+- Team 5 
+    - 3 MS are created for auth, 
+    - do book operations 
+    - CRUD operations are done 
+    - 
