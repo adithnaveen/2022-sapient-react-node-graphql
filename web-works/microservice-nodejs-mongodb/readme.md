@@ -1,13 +1,19 @@
+
+
+
 the application is working find with api-gateway(8000) and product service(3000) 
 
 - Port Number 
     - API Gateway 8000 
     - Product Service - 3000 
 
+
 cd api-gateway
+> npm i 
 > npm start
 
 cd product-service 
+> npm i 
 > npm start 
 
 

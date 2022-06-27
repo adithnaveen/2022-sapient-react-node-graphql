@@ -12,7 +12,6 @@ class Routes {
   /* creating app Routes starts */
   appRoutes() {
 
-
     this.app.get("/", (req, res) => {
       res.json("API GATEWAY CALLED... ")
     })
@@ -29,7 +28,7 @@ class Routes {
 
     // TODO 
     this.app.get("/order/", (req, res) => {
-      productServiceProxy(req, res);
+      orderServiceProxy(req, res);
     })
 
     this.app.get('/order/:orderId', (req, res) => {

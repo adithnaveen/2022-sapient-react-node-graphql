@@ -1254,4 +1254,74 @@ Team 5 - Ravivarma, Rohit, Santosh, Vikas verma , hitesh
     - 3 MS are created for auth, 
     - do book operations 
     - CRUD operations are done 
-    - 
+    
+
+
+```
+- fetch is part of java script 
+
+    fetch(url, {options})
+        .then(data => perform operations)
+        .then(data => perform operations)
+        .then(data => perform operations)
+        .then(data => perform operations)
+        .catch(err => perform operations); 
+
+- axios 
+    - + a very good candidate for multipart (images/ videos etc)
+    - you need to install npm i axios 
+    
+```
+
+
+- Angular - Framework 
+- ReactJS  - Library 
+
+- Method - may, maynot return the value when it has to return then it can return more than 1 value 
+- Function - a function will return exactly ony one value 
+
+```
+    class Hello extends Component {
+        render() {
+            return 
+                <fragment>
+                    <p>Hi </p>
+                    <h2> My Name is ReactJS</h2>
+                </fragment>
+        }
+    }
+```
+
+- React Project can be create from scratch 
+
+
+
+
+
+
+```
+
+Success! Created reactjs-first-app at /Volumes/Kanchan/MyTrainings/sapient/2022-sapient-react-node-graphql/web-works/react-workspace/reactjs-first-app
+Inside that directory, you can run several commands:
+
+  npm start - 3000 
+    Starts the development server.
+
+  npm run build
+    Bundles the app into static files for production.
+
+  npm test
+    Starts the test runner.
+
+  npm run eject
+    Removes this tool and copies build dependencies, configuration files
+    and scripts into the app directory. If you do this, you can’t go back!
+
+We suggest that you begin by typing:
+
+  cd reactjs-first-app
+  npm start
+
+Happy hacking!
+
+```
