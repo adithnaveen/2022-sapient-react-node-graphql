@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
+import Btn1 from './Btn'
 import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
 
+const Btn = (props) => (
+    <button className='btn btn-danger' onClick={props.handler}>{props.caption}</button>
+)
 
 class App extends Component {
 
@@ -36,11 +40,13 @@ class App extends Component {
     decrement = () => {
         this.setState({ num: this.state.num - 1 });
     }
-    incrementOrDecrement // do something 
+    incrementOrDecrement = (incDecVal) => {
+        this.setState({ num: this.state.num + incDecVal });
+    }
     render() {
 
         // never call setState in render 
-        this.setState({ num: this.state.num + 1 });
+        // this.setState({ num: this.state.num + 1 });
         return (
             <div className="app-content">
                 <h3>This is the content area of the application</h3>
@@ -56,6 +62,20 @@ class App extends Component {
                 {/* in this care the increment is not calling instead the reference is passed  */}
                 <button className="btn btn-primary" onClick={this.increment} >Increment</button>
                 <button className="btn btn-danger" onClick={this.decrement}>Decrement</button>
+                <hr />
+
+                <button className='btn btn-primary' onClick={() => this.incrementOrDecrement(1)}>INCREMENT</button>
+                <button className='btn btn-primary' onClick={() => this.incrementOrDecrement(-1)}>DECREMENT</button>
+                <hr />
+
+                <Btn caption="INCR" handler={() => this.incrementOrDecrement(1)} />
+                <Btn caption="DECR" handler={() => this.incrementOrDecrement(-1)} />
+
+                <hr />
+
+                <Btn1 caption="INCR" handler={() => this.incrementOrDecrement(1)} />
+                <Btn1 caption="DECR" handler={() => this.incrementOrDecrement(-1)} />
+
             </div>
         );
     }
