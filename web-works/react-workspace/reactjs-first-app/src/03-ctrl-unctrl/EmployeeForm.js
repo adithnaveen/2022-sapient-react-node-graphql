@@ -12,7 +12,8 @@ class EmployeeForm extends Component {
             name: "Name Required",
             email: "Email Required",
             contact: "Contact Required"
-        }
+        },
+        errorMessages: ""
     }
 
     tfHandler = (evt) => {
@@ -40,6 +41,13 @@ class EmployeeForm extends Component {
                 break;
 
             case 'contact':
+                if (!value || value.length === 0) {
+                    formError.contact = "Contact Required"
+                } else if (!value.match(/\d{10,12}/)) {
+                    formError.contact = "Conact should be between 10 and 12 char"
+                } else {
+                    formError.contact = '';
+                }
                 break;
 
             default:
@@ -48,6 +56,25 @@ class EmployeeForm extends Component {
         // re-render 
         this.setState({ [name]: value, formError })
     }
+
+    submitHandler = (evt) => {
+        console.log("Form Submitted");
+        evt.preventDefault();
+        let { formError } = this.state;
+        if (this.validateForm(formError)) {
+            alert("Form Submitted...");
+        } else {
+            let errorMessages = Object.values(formError).map((err, idx) => err.length === 0 ? null : <li key={idx}>{err}</li>)
+            this.setState({ errorMessages });
+        }
+    }
+
+    validateForm = (formError) => {
+        let valid = true;
+        Object.values(formError).forEach((err) => valid = valid && err.length === 0)
+        return valid;
+    }
+
 
     render() {
         return (
@@ -106,6 +133,9 @@ class EmployeeForm extends Component {
                         </form>
                     </div>
                     <div className="col">
+                        <ul>
+                            {this.state.errorMessages}
+                        </ul>
                         <h2>Current State values</h2>
                         <pre>{JSON.stringify(this.state, null, 3)}</pre>
                     </div>
