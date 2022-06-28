@@ -1339,4 +1339,20 @@ Happy hacking!
 
 # Day 10 
 
+- content submission 
+    - un-controlled component 
+        ```
+        .. some code 
+        submitHandler =() => {
+            const name = this.refs.name
+        }
 
+        render() {
+            .... 
+            -- this is written in render function 
+            <input type="text" className="form-control" id="name" ref="name">
+
+            <input type="submit" onclick={this.submitHandler}> submit </input>
+        }
+        ```
+    - controlled component 
