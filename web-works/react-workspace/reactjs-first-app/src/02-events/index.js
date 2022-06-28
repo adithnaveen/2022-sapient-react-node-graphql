@@ -7,6 +7,7 @@ const Btn = (props) => (
     <button className='btn btn-danger' onClick={props.handler}>{props.caption}</button>
 )
 
+// state is the only variable which implicitly injects in to stateful component 
 class App extends Component {
 
     // constructor() {
@@ -73,7 +74,7 @@ class App extends Component {
 
                 <hr />
 
-                <Btn1 caption="INCR" handler={() => this.incrementOrDecrement(1)} />
+                <Btn1 caption="INCR" handler={() => this.incrementOrDecrement(1)} val={this.state.num} />
                 <Btn1 caption="DECR" handler={() => this.incrementOrDecrement(-1)} />
 
             </div>
