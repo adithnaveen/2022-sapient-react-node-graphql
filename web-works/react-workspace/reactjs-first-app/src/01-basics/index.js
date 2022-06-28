@@ -21,8 +21,6 @@ class App extends Component {
                 <AppHeader title="Publicis Sapient" location="Bengaluru" />
                 <AppComponent name="Sandeep" />
                 {/* <AppFooter company={footerProps.company} year={footerProps.year} website={footerProps.website} /> */}
-
-
                 <AppFooter
                     {...footerProps} />
             </div>

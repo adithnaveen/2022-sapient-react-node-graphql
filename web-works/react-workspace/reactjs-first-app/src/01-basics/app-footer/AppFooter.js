@@ -2,12 +2,13 @@ import React from 'react';
 
 import './app-footer.css';
 
-export default function AppFooter(props) {
+const AppFooter = ({ website, year, company }) => {
     return (
         <div>
             <hr />
-            <p className='app-footer' >{props.website}, Copyright Reserved {props.year}, {props.company} </p>
+            <p className='app-footer' >{website}, Copyright Reserved {year}, {company} </p>
         </div>
     )
 }
 
+export default AppFooter;
