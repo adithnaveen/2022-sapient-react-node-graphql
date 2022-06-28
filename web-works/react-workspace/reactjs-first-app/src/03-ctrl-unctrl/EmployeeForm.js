@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+import 'bootstrap/dist/css/bootstrap.css';
 
 class EmployeeForm extends Component {
     state = {}
@@ -9,7 +10,6 @@ class EmployeeForm extends Component {
                 <div className="row">
                     <div className="col">
 
-                        <h3 className="alert alert-danger">Controlled Component</h3>
 
                         <form className="form-group" onSubmit={this.submitHandler}>
 
