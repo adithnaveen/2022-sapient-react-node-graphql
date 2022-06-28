@@ -6,9 +6,10 @@ import './app-header.css';
 class AppHeader extends Component {
 
     render() {
+
         return (
             <>
-                <h1>Hey i'm in Header</h1>
+                <h1>Site for {this.props.title} Located At {this.props.location}</h1>
                 <hr />
             </>
         );
