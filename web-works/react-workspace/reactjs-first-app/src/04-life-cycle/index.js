@@ -15,6 +15,7 @@ class App extends Component {
         if (this.state.showHideApp === true) {
             output = <CounterApp />;
         }
+
         return (
             <div className="container">
                 <h1 className='alert alert-danger'>Counter Application - In Index</h1>
