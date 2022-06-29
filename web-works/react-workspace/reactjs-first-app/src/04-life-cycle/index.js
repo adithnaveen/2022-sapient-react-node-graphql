@@ -7,13 +7,14 @@ import './index.css';
 
 class App extends Component {
     state = {
-        showHideApp: true
+        showHideApp: true,
+        title: "Hello World"
     }
     render() {
 
         let output = null;
         if (this.state.showHideApp === true) {
-            output = <CounterApp />;
+            output = <CounterApp title={this.state.title} />;
         }
 
         return (
@@ -25,7 +26,22 @@ class App extends Component {
                     onClick={() => {
                         this.setState({ showHideApp: !this.state.showHideApp })
                     }}
+                >Show/Hide Component</button>
+
+
+
+                <button className='btn btn-secondary'
+                    onClick={() => {
+                        if (this.state.title === 'Hello World') {
+                            this.setState({ title: "React World" });
+                        } else {
+                            this.setState({ title: "Hello World" });
+                        }
+                    }}
                 >Toggle Title</button>
+
+
+
 
                 {output}
             </div>
