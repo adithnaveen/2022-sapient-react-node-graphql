@@ -18,7 +18,7 @@ class App extends Component {
 
     render() {
 
-        const contactsList = this.state.contacts.map(c => <ContactCard contact={c} />)
+        const contactsList = this.state.contacts.map(c => <ContactCard contact={c} key={c.id} />)
         return (
             <div className="container">
                 <h1 className='alert alert-info'>Contacts list</h1>
