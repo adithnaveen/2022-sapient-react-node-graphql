@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 
+import ContactCard from './ContactCard';
+
+import 'bootstrap/dist/css/bootstrap.css';
 
 class App extends Component {
     state = {
