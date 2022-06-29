@@ -22,6 +22,9 @@
 - https://expressjs.com/en/guide/using-middleware.html
 
 
+## life cycle function 
+- https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
+
 
 
 

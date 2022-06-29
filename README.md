@@ -1357,3 +1357,52 @@ Happy hacking!
         ```
     - controlled component 
         - validation 
+
+
+
+
+# Day 11 
+- Team 1 
+    - mostly by tomorrow we should have the code 
+
+- Team 2 
+    - mostly done with MS, 
+    - create React Project 
+
+- Team 3 
+    - integration is done, need to be tested a full app 
+    - need to create react project 
+
+- Team 4 
+    - backend code is mostly done + some documentation needed 
+    - created frontend repo 
+
+- Team 5 
+    - MS will be completed by today 
+    - need to create frontend repo. 
+
+
+
+
+```
+    // stateful / controlled 
+    class MyComponent extend Component {
+        state : {}
+        refs 
+        params 
+        contexts
+        ..... 
+        + lifecycle 
+    // we need somebody before render to do this 
+        componentDidMount() {
+            ideally get the data from the end point 
+            setState() -> render() 
+        }
+        render() {
+            setState() // not allowed 
+        }
+    }
+
+    // statelsess / functional 
+    function hi() {} - hooks 
+```
