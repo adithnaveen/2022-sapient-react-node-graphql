@@ -1405,4 +1405,8 @@ Happy hacking!
 
     // statelsess / functional 
     function hi() {} - hooks 
+
+
+    const myComponent = () => {return <div></div>}
+    const myComponent = () => (<div></div>)
 ```

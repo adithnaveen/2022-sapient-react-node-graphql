@@ -1,8 +1,7 @@
 import React from 'react';
 
-const ContactCard = ({ contact }) => (
-
-    <div className="card" style={{ width: '400px', height: '120px', margin: '10px', padding: '10px' }}>
+const ContactCard = ({ contact }) => {
+    return <div className="card" style={{ width: '400px', height: '120px', margin: '10px', padding: '10px' }}>
         <div className="row">
             <div className="col-md-4">
                 <img src={contact.pic} alt={contact.name} className="card-img"
@@ -18,6 +17,8 @@ const ContactCard = ({ contact }) => (
             </div>
         </div>
     </div>
-);
+
+
+}
 
 export default ContactCard; 
