@@ -23,10 +23,7 @@ class App extends Component {
             this.setState({ contacts })
         }
     }
-
-
-
-
+ 
     state = {
         contacts: [
             {
@@ -83,9 +80,7 @@ class App extends Component {
                         <ContactForm addContact={this.addContact} />
                     </div>
                     <div className="col-md-7">
-
                         <ContactList contacts={this.state.contacts} deleteContact={this.deleteContact} />
-
                     </div>
                 </div>
 
