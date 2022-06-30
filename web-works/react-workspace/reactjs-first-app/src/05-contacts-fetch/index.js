@@ -18,7 +18,28 @@ class App extends Component {
 
     render() {
 
-        const contactsList = this.state.contacts.map(c => <ContactCard contact={c} key={c.id} />)
+
+        const newContacts = [
+            {
+                "id": 1,
+                "name": "Jerrie Bourges",
+                "email": "jbourges0@edublogs.org",
+                "gender": "Female",
+                "phone": "119-501-9683",
+                "pic": "https://randomuser.me/api/portraits/women/40.jpg"
+            },
+            {
+                "id": 2,
+                "name": "Maribelle Illesley",
+                "email": "millesley1@fc2.com",
+                "gender": "Female",
+                "phone": "796-876-3388",
+                "pic": "https://randomuser.me/api/portraits/women/39.jpg"
+            }];
+
+
+        const contactsList = this.state.contacts.map(c => <ContactCard contact={c} key={c.id} />);
+
         return (
             <div className="container">
                 <h1 className='alert alert-info'>Contacts list</h1>
