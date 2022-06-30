@@ -9,7 +9,8 @@ import ReactDOM from 'react-dom/client';
 // import App from './05-contacts-fetch';
 // import App from './06-multi-component';
 // import App from './07-hoc';
-import App from './08-virtual-dom';
+// import App from './08-virtual-dom';
+import App from './09-hooks';
 
 
 

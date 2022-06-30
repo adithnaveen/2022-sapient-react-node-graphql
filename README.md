@@ -1410,3 +1410,78 @@ Happy hacking!
     const myComponent = () => {return <div></div>}
     const myComponent = () => (<div></div>)
 ```
+
+
+
+# Day 12 
+
+- how react js was 
+```
+    var oldComponent = React.createClass({
+        render: function() {
+            return(
+                <div>
+                    <h1>I'm old style guy</h1>
+                </div>
+            )
+        }
+    });
+```
+
+-- with es6 
+```
+    class StillOldStyleClass extends Component {
+        // when there is a mutation on setState 
+        // or there was life cycle functions 
+        render() {
+             return(
+                <div>
+                    <h1>I'm old style guy</h1>
+                </div>
+            )
+        }
+    }
+```
+
+-- with functional component 
+
+```
+    function NewStyleComponent () {
+        return(
+            <div>
+                <h1>I'm old style guy</h1>
+            </div>
+        )
+    }
+```
+
+- from 16.x is to have functional component behave like state full 
+- hooks 
+
+```
+    function LatestComponent() {
+        const [name, setName]= useState('Laptop');
+        const [count, setCount]= useState(1);
+        return(
+            <div>
+                Name : {name}
+                <button
+                    onClick =() => {
+                        setName({name:"New Laptop"})
+                    }
+                >Change</button>
+            </div>
+        );
+    }
+```
+
+
+
+1. copmlete HOC 
+2. products with hooks 
+3. the current program  
+    3.1 button -> Clear 
+    3.2 button -> Load Data 
+4. the buttons should be styled components 
+
+
