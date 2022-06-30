@@ -19,7 +19,7 @@ class ContactsList extends Component {
     }
 }
 
-export default Loading(ContactsList);
+export default Loading('contacts')(ContactsList);
 
 
 

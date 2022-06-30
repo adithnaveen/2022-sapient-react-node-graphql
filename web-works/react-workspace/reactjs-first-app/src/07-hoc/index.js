@@ -17,7 +17,14 @@ class App extends Component {
     render() {
         return (
             <div className="container">
-                <ContactList contacts={this.state.contacts} />
+                <div className="row">
+                    <div className="col">
+                        <ContactList contacts={this.state.contacts} />
+                    </div>
+                    <div className="col">
+                        <h2>Products List To Go Here</h2>
+                    </div>
+                </div>
             </div>
         );
     }

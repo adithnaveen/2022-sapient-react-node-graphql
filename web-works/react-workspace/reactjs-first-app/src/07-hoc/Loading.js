@@ -34,8 +34,8 @@ function isEmpty(data) {
 
 // const Loading = (property) =>  (OldComponent) => (props) => {}
 
-
-
+// version 2.0 
+/* 
 
 const Loading = (OldComponent) => (props) => {
     let output = <OldComponent {...props} />
@@ -46,7 +46,19 @@ const Loading = (OldComponent) => (props) => {
 
     return output;
 }
+ */
 
+
+// version 3.0 
+const Loading = (property) => (OldComponent) => (props) => {
+    let output = <OldComponent {...props} />
+
+    if (isEmpty(props[property])) {
+        output = <h3 className='alert alert-danger'>Loading Please wait... </h3>
+    }
+
+    return output;
+}
 
 
 
