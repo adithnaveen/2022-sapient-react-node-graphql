@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 
 import ContactCard from './ContactCard'
+import Loading from './Loading';
+
 
 class ContactsList extends Component {
 
@@ -18,3 +20,8 @@ class ContactsList extends Component {
 }
 
 export default Loading(ContactsList);
+
+
+
+// export default Loading('accounts')(AccountList);
+// export default Loading('products')(ProductList);

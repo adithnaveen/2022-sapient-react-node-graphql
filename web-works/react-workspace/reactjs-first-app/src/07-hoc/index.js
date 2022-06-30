@@ -1,5 +1,8 @@
 import React, { Component } from 'react'
 
+import ContactList from './ContactList';
+
+import 'bootstrap/dist/css/bootstrap.css';
 
 class App extends Component {
     state = {
