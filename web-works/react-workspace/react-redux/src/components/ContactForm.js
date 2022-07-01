@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
+import { addContact } from '../actions/contacts-action';
 class ContactForm extends Component {
 
     state = {
         name: '',
         email: '',
         phone: '',
-        picture: '',
+        pic: '',
         formErrors: {
             name: 'Name is required',
             email: 'Email is required',
@@ -74,15 +76,16 @@ class ContactForm extends Component {
         this.setState({ errorMessages })
 
         if (this.validateForm(this.state.formErrors)) {
-            let { name, email, phone, picture } = this.state;
-            let contact = { name, email, phone, picture };
-            console.log(contact);
+            let { name, email, phone, pic } = this.state;
+            let contact = { name, email, phone, pic };
+
+            this.props.addContact(contact);
 
             this.setState({
                 name: '',
                 email: '',
                 phone: '',
-                picture: '',
+                pic: '',
                 formErrors: {
                     name: 'Name is required',
                     email: 'Email is required',
@@ -117,9 +120,9 @@ class ContactForm extends Component {
                         </div>
                     </div>
                     <div className="form-group row">
-                        <label htmlFor="" className="control-label col-md-4">URL to picture/avatar</label>
+                        <label htmlFor="" className="control-label col-md-4">URL to pic/avatar</label>
                         <div className="col-md-8">
-                            <input value={this.state.picture} onChange={this.tfHandler} type="text" className="form-control" name="picture" />
+                            <input value={this.state.pic} onChange={this.tfHandler} type="text" className="form-control" name="pic" />
                         </div>
                     </div>
                     <button className="btn btn-primary">Add to list</button>
@@ -133,4 +136,4 @@ class ContactForm extends Component {
     }
 }
 
-export default ContactForm;
+export default connect(null, { addContact })(ContactForm);

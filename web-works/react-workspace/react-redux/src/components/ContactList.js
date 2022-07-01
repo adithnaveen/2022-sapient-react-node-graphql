@@ -17,7 +17,7 @@ class ContactList extends Component {
         let { contacts } = this.props;
 
         if (contacts instanceof Array && contacts.length > 0) {
-            list = contacts.map(c => <ContactCard contact={c} />)
+            list = contacts.map(c => <ContactCard contact={c} key={c.id} />)
         }
 
         return (

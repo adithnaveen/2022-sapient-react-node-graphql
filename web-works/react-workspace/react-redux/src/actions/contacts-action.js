@@ -1,6 +1,6 @@
 import { ADD_CONTACT, DELETE_CONTACT, GET_CONTACTS } from "../types/contants";
 
-const url = "http://localhost:4000/contacts";
+const url = "http://localhost:4000/contacts/";
 
 // in react component need to dispatch 
 // dispatch will be given by somebody - dispatch

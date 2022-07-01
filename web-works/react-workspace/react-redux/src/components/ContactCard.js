@@ -1,4 +1,10 @@
-const ContactCard = ({ contact }) => (
+
+import { deleteContact } from '../actions/contacts-action';
+import { connect } from 'react-redux';
+
+
+
+const ContactCard = ({ contact, deleteContact }) => (
     <div className="card" style={{ width: '700px', height: '180px', margin: '10px', padding: '10px' }}>
         <div className="row">
 
@@ -10,7 +16,12 @@ const ContactCard = ({ contact }) => (
                 <div className="card-body">
                     <h4 className="card-title">{contact.gender === 'Male' ? "Mr. " : "Ms/Mrs. "}{contact.name}
 
-                        <button>X</button>
+                        <button
+                            className='btn btn-danger'
+                            onClick={() => {
+                                deleteContact(contact.id)
+                            }}
+                        >X</button>
 
                     </h4>
                     <h4 className="card-text">{contact.email}</h4>
@@ -25,4 +36,6 @@ const ContactCard = ({ contact }) => (
         </div>
     </div>
 )
-export default ContactCard; 
+
+
+export default connect(null, { deleteContact })(ContactCard); 
