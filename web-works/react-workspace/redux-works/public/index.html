@@ -11,11 +11,30 @@
 
   <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 
-  <title>React App</title>
+  <title>Redux App</title>
 </head>
 
 <body>
-  
+
+  <div class="container">
+    <h1>Redux Demo Application</h1>
+    <div class="row">
+      <div class="col alert alert-warning">
+        <h3>Enter Name</h3>
+        <form id="frmName">
+          <input type="text" id="name" class="form-control">
+          <button class="btn btn-primary">Add Name</button>
+        </form>
+      </div>
+
+
+      <div class="col alert alert-info">
+        <h3>List Of Names</h3>
+        <ul class="list-group" id="namesList"></ul>
+      </div>
+
+    </div>
+  </div>
 
 </body>
 

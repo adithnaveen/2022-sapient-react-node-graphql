@@ -1,17 +1,26 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+import { createStore } from 'redux';
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import 'bootstrap/dist/css/bootstrap.css';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+const initialState = ['Hemanth', 'Ayush'];
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+const reducer = (state = initialState, action) => {
+  switch (action.type) {
+    case 'ADD_NAME':
+      console.log('Data got for storing', action.data);
+      return [...state, action.data];
+
+    case 'DELETE_NAME':
+      let names = [...state];
+      names.splice(action.data, 1);
+      return names;
+
+    default:
+      return state;
+  }
+}
+
+// as of now store is local variable we need to put it in window scope 
+const store = createStore(reducer);
+
+window['store'] = store; 
