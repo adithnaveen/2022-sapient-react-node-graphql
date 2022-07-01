@@ -1538,3 +1538,7 @@ const action={type='GET_ALL_CONTACTS'};
     }
     
 ```
+
+
+
+> function connect(mapStateToProps?, mapDispatchToProps?, mergeProps?, options?)

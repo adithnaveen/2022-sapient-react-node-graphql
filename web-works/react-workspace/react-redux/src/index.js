@@ -8,13 +8,12 @@ import ContactForm from './components/ContactForm';
 import ContactList from './components/ContactList';
 
 
-import { createStore } from 'redux';
+import { applyMiddleware, createStore } from 'redux';
 import rootReducer from './reducers/root-reducer';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import { Provider } from 'react-redux';
-
-const store = createStore(rootReducer, composeWithDevTools());
-
+import thunk from 'redux-thunk'
+const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk)));
 
 class App extends Component {
 
