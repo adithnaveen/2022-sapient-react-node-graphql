@@ -1485,3 +1485,56 @@ Happy hacking!
 4. the buttons should be styled components 
 
 
+
+
+```
+    {
+        contacts:[
+            // contacts will be here 
+        ], 
+        products:[
+            // all products are here 
+        ]
+    }
+
+    http://localhost:4000/contacts 
+    http://localhost:4000/products 
+```
+
+
+# Day 13 
+
+const action ={}; 
+action.type='ADD_CONTACT'; 
+action.data={empname:"Vikas", salary:1234}; 
+
+const action={type='ADD_CONTACT', data={empname:"Vikas", salary:1234} }; 
+const action={type='DELETE_CONTACT', data=1}; 
+const action={type='GET_ALL_CONTACTS'}; 
+
+
+-- reducer clear
+
+
+```
+    const initialState= ['Sailesh', 'Prit'];
+
+    const resuder = (currentState = initialState, action) => {
+        switch(action.type) {
+            case 'ADD-NAME':
+                //// business logic 
+                // take the current records from the store 
+                // + add the name which we have got like : action.data 
+                // accumulate then return it, when you return it goes to store 
+                return; 
+
+            case 'DELETE_NAME': 
+                //// business logic 
+                return; 
+
+            default: 
+                [... currentState]
+        }
+    }
+    
+```

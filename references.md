@@ -25,6 +25,8 @@
 ## life cycle function 
 - https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
 
+## redux data flow 
+- https://redux.js.org/tutorials/fundamentals/part-2-concepts-data-flow
 
 
 

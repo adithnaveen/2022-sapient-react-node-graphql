@@ -160,5 +160,15 @@
       "phone": "725-454-1198",
       "pic": "https://randomuser.me/api/portraits/men/12.jpg"
     }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Laptop"
+    },
+    {
+      "id": 2,
+      "name": "Keyboard"
+    }
   ]
 }
