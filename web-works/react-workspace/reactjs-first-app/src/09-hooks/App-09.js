@@ -1,6 +1,6 @@
 // using custom hooks 
 
-import { useInput } from './useInput'
+import { useInput } from '../custom-hooks/useInput'
 
 const App = () => {
     const [nameProperty, resetName] = useInput("");
@@ -9,6 +9,10 @@ const App = () => {
     const submitHandler = (e) => {
         e.preventDefault();
 
+        alert(`${nameProperty.value} is happily living in ${cityProperty.value}`);
+
+        resetName();
+        resetCity();
     }
 
     return (
@@ -21,3 +25,5 @@ const App = () => {
         </>
     )
 }
+
+export default App;
