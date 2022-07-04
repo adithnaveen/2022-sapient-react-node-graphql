@@ -1,4 +1,4 @@
-import { ADD_CONTACT, DELETE_CONTACT, GET_CONTACTS } from "../types/contants";
+import { ADD_CONTACT, DELETE_CONTACT, GET_CONTACT, GET_CONTACTS } from "../types/contants";
 
 
 
@@ -23,6 +23,9 @@ export default (state = { contacts: [] }, action) => {
             }
         case GET_CONTACTS:
             return { ...state, contacts: action.data };
+
+        case GET_CONTACT:
+            return { ...state, contact: action.data }
 
         default:
             return state;

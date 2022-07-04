@@ -1,6 +1,7 @@
 
 import { deleteContact } from '../actions/contacts-action';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom'
 
 
 
@@ -14,8 +15,11 @@ const ContactCard = ({ contact, deleteContact }) => (
             </div>
             <div className="col-md-8">
                 <div className="card-body">
-                    <h4 className="card-title">{contact.gender === 'Male' ? "Mr. " : "Ms/Mrs. "}{contact.name}
 
+                    <h4 className="card-title">
+                        <Link to={"/view-contact/" + contact.id}>
+                            {contact.gender === 'Male' ? "Mr. " : "Ms/Mrs. "} {contact.name}
+                        </Link>
                         <button
                             className='btn btn-danger'
                             onClick={() => {
@@ -34,7 +38,7 @@ const ContactCard = ({ contact, deleteContact }) => (
                 </div>
             </div>
         </div>
-    </div>
+    </div >
 )
 
 

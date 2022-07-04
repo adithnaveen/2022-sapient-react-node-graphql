@@ -1,4 +1,4 @@
-import { ADD_CONTACT, DELETE_CONTACT, GET_CONTACTS } from "../types/contants";
+import { ADD_CONTACT, DELETE_CONTACT, GET_CONTACTS, GET_CONTACT } from "../types/contants";
 
 const url = "http://localhost:4000/contacts/";
 
@@ -33,3 +33,14 @@ export const deleteContact = (id) => async (dispatch) => {
     await fetch(url + id, { method: 'DELETE' });
     dispatch({ type: DELETE_CONTACT, data: id });
 }
+
+// get 1 contact 
+
+export const getContactById = (id) => async (dispatch) => {
+    let resp = await fetch(url + id);
+    let contact = await resp.json();
+    dispatch({ type: GET_CONTACT, data: contact });
+}
+
+
+

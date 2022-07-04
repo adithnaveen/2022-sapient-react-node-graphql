@@ -9,14 +9,6 @@
       "pic": "https://randomuser.me/api/portraits/men/40.jpg"
     },
     {
-      "id": 5,
-      "name": "Elane Steinham",
-      "email": "esteinham4@apache.org",
-      "gender": "Female",
-      "phone": "878-533-6634",
-      "pic": "https://randomuser.me/api/portraits/men/41.jpg"
-    },
-    {
       "id": 6,
       "name": "Diena Poll",
       "email": "dpoll5@usa.gov",
@@ -142,6 +134,20 @@
       "phone": "6544566545",
       "pic": "https://randomuser.me/api/portraits/women/3.jpg",
       "id": 21
+    },
+    {
+      "name": "Harshitha",
+      "email": "har@gmail.com",
+      "phone": "6543216542",
+      "pic": "https://randomuser.me/api/portraits/women/3.jpg",
+      "id": 22
+    },
+    {
+      "name": "Rohit",
+      "email": "rohit@gmail.com",
+      "phone": "7887788787",
+      "pic": "https://randomuser.me/api/portraits/men/40.jpg",
+      "id": 23
     }
   ]
 }

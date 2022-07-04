@@ -1542,3 +1542,7 @@ const action={type='GET_ALL_CONTACTS'};
 
 
 > function connect(mapStateToProps?, mapDispatchToProps?, mergeProps?, options?)
+
+
+- npm uninstall react-router-dom 
+- npm i react-router-dom@5.2.0
