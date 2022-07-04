@@ -11,9 +11,13 @@ import React, { createContext, useContext } from 'react';
 // import App from './06-multi-component';
 // import App from './07-hoc';
 // import App from './08-virtual-dom';
-// import App from './09-hooks';
+import App from './09-hooks';
 
-export const CitiesContext = createContext()
+
+// good idea to keep all your context created here 
+const CitiesContext = createContext()
+export const useCities = () => useContext(CitiesContext);
+
 
 const cities = [
     { id: 1, name: "Bengaluru" },
@@ -23,22 +27,6 @@ const cities = [
     { id: 5, name: "Kolkatta" }
 ];
 
-
-function App() {
-
-    const { cities } = useContext(CitiesContext);
-
-    return (
-        <div>
-            <h1>The Cities In India</h1>
-            <ul>
-                {
-                    cities.map(city => <li key={city.id}>{city.name}</li>)
-                }
-            </ul>
-        </div>
-    )
-}
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
