@@ -27,15 +27,20 @@ const cities = [
     { id: 5, name: "Kolkatta" }
 ];
 
-
 const root = ReactDOM.createRoot(document.getElementById("root"));
+// working with App-10.js - useContext 
+/*
+
 root.render(
     <CitiesContext.Provider value={{ cities }}>
         <App />
     </CitiesContext.Provider>
 );
+ */
 
-
+root.render(
+    <App login="adithnaveen" />
+);
 
 
 
