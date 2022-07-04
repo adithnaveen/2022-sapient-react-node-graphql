@@ -1,5 +1,6 @@
 
 import ReactDOM from 'react-dom/client';
+import React, { createContext, useContext } from 'react';
 
 // import App from './01-basics';
 // import App from './02-events';
@@ -10,9 +11,65 @@ import ReactDOM from 'react-dom/client';
 // import App from './06-multi-component';
 // import App from './07-hoc';
 // import App from './08-virtual-dom';
-import App from './09-hooks';
+// import App from './09-hooks';
+
+export const CitiesContext = createContext()
+
+const cities = [
+    { id: 1, name: "Bengaluru" },
+    { id: 2, name: "Delhi" },
+    { id: 3, name: "Mumbai" },
+    { id: 4, name: "Chennai" },
+    { id: 5, name: "Kolkatta" }
+];
 
 
+function App() {
+
+    const { cities } = useContext(CitiesContext);
+
+    return (
+        <div>
+            <h1>The Cities In India</h1>
+            <ul>
+                {
+                    cities.map(city => <li key={city.id}>{city.name}</li>)
+                }
+            </ul>
+        </div>
+    )
+}
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
+    <CitiesContext.Provider value={{ cities }}>
+        <App />
+    </CitiesContext.Provider>
+);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// working with Virtual Dom 
 
 // working with dom 
 // let h1 = document.createElement("h1");
@@ -26,6 +83,3 @@ import App from './09-hooks';
 //     h1.innerHTML = 'Welcome to React JS';
 //     console.log("updating heading " ,  count++ , " times ");
 // }, 1000);
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<App />);

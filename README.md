@@ -1560,3 +1560,19 @@ const action={type='GET_ALL_CONTACTS'};
         )
     }
 ```
+
+```
+    <Provider>
+        <Router>
+            <App1 />
+            <App2 />
+        </Reuter>
+    </Provider>
+```
+
+
+
+ 
+
+
+
