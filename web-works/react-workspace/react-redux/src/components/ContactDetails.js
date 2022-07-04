@@ -12,9 +12,6 @@ class ContactDetails extends Component {
 
     render() {
 
-
-
-
         let { contact } = this.props;
         if (!contact) contact = {};
         return (

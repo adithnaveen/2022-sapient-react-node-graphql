@@ -81,18 +81,20 @@ class ContactForm extends Component {
 
             this.props.addContact(contact);
 
-            this.setState({
-                name: '',
-                email: '',
-                phone: '',
-                pic: '',
-                formErrors: {
-                    name: 'Name is required',
-                    email: 'Email is required',
-                    phone: 'Phone is required'
-                },
-                errorMessages: ''
-            });
+            this.props.history.push("/view-all-contacts");
+
+            // this.setState({
+            //     name: '',
+            //     email: '',
+            //     phone: '',
+            //     pic: '',
+            //     formErrors: {
+            //         name: 'Name is required',
+            //         email: 'Email is required',
+            //         phone: 'Phone is required'
+            //     },
+            //     errorMessages: ''
+            // });
         }
     }
 

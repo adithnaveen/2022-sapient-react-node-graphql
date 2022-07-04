@@ -1546,3 +1546,17 @@ const action={type='GET_ALL_CONTACTS'};
 
 - npm uninstall react-router-dom 
 - npm i react-router-dom@5.2.0
+
+
+
+```
+    App() {
+        const [state, action]= useReducer(()=>businesslogic, initialvalue)
+        
+        return(
+            <div>
+                <input type='checkbox' ... onclick={action}>
+            </div>
+        )
+    }
+```
