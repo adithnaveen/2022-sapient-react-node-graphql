@@ -1571,7 +1571,10 @@ const action={type='GET_ALL_CONTACTS'};
 ```
 
 
-
+end point to hit -> https://api.github.com/users
+1. The Data is Loading 
+2. The data has Error 
+3. The data is Arrived
  
 
 
