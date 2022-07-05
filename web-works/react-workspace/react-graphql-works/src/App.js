@@ -40,7 +40,7 @@ function App() {
   return (
     <div className="container mt-5">
       <h1 className="text-primary"><i className="bi bi-diagram-2-fill">Repos</i></h1>
-      <p>Looking Repo of <i> {login}</i> with userName : {userName} has {repositoryCount} Repositories</p>
+      <p>Looking Repo of <i> {login}</i> with userName : <strong>{userName}</strong> has {repositoryCount} Repositories</p>
 
       {repoList && (
         <ul className="list-group list-group-flush">

@@ -1603,3 +1603,5 @@ end point to hit -> https://api.github.com/users
           "viewerSubscription": "SUBSCRIBED"
     }
 ```
+
+1. the application shall have drop down which should take number of repos shown like 10 / 20 / 30 / 40 / All 
