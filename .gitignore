@@ -105,3 +105,8 @@ dist
 
 # TernJS port file
 .tern-port
+
+
+# github token details 
+
+github-token.js

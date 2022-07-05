@@ -1579,3 +1579,17 @@ end point to hit -> https://api.github.com/users
 
 
 
+
+>  open -n -a /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --args --user-data-dir="/tmp/chrome_dev_test" --disable-web-security
+
+
+
+
+
+
+1. Saga Pattern 
+2. Saga-redux 
+3. working with graphql with ReactJS 
+
+
+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

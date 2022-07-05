@@ -1,4 +1,4 @@
-import { ADD_CONTACT, DELETE_CONTACT, GET_CONTACT, GET_CONTACTS } from "../types/contants";
+import { ADD_CONTACT, DELETE_CONTACT, GET_CONTACT, GET_CONTACTS, GET_CONTACTS_ASYNC } from "../types/contants";
 
 
 
