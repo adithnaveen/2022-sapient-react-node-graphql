@@ -1,5 +1,5 @@
 /* const githubQuery = {
-    query: `
+  query: `
     {
       viewer {
         login
@@ -18,25 +18,31 @@
 
 
 
-const githubQuery = {
-  query: `
-  {
-    viewer {
-      name
-      login
-    }
-    search(query: "user:adithnaveen sort:updated-desc", type: REPOSITORY, first: 10) {
-      nodes {
-        ... on Repository {
-          name
-          description
-          id
-          url
-          viewerSubscription
+const githubQuery = (pageCount) => {
+  return {
+    query: `
+    {
+      viewer {
+        name
+        login
+      }
+      search(query: "user:adithnaveen sort:updated-desc", type: REPOSITORY, first: ${pageCount}) {
+        repositoryCount
+        nodes {
+          ... on Repository {
+            name
+            description
+            id
+            url
+            viewerSubscription
+            licenseInfo {
+              spdxId
+            }
+          }
         }
       }
-    }
   }`
+  }
 }
 
 export default githubQuery;
