@@ -1579,13 +1579,13 @@ end point to hit -> https://api.github.com/users
 
 
 
-- Mac 
+- Mac - terminal 
 >  open -n -a /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --args --user-data-dir="/tmp/chrome_dev_test" --disable-web-security
 
 - windows 
 > chrome.exe --disable-web-security
 
-
+> chrome.exe --user-data-dir="C:/Chrome dev session" --disable-web-security
 
 
 1. Saga Pattern 
